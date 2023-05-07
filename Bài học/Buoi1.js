@@ -154,3 +154,56 @@ login("mindx", "12345",success) //Cách 2: khai báo function ở trên
 5. Class Declaration: Khai báo lớp cũng có tính chất hoisting, bởi vì nó được xem như là một loại hàm đặc biệt.
 6. Function generator: Generator function cũng có tính chất hoisting và có thể được sử dụng trước khi được khai báo.
 */
+
+const users = ["Thy","Hiếu", "Long"];
+const users2 = ["Quyên", ...users];
+const users3= [...users, ...users2];
+
+
+const handleUsers => (user => {
+    let newUser = [];
+})
+const uniqueUsers = users3.filter((value, index, self) => self.indexOf(value) === index);
+console.log(uniqueUsers); // ["Thy", "Hiếu", "Long", "Quyên"]
+
+
+
+
+
+// Viết function nhận vào ngày tháng năm sinh, sau đó trả về tuổi của người dung theo dạng: Tuổi của bạn là: 22 năm, 3 tháng, 20 ngày
+let gettingAge = (str) => {
+    const dateTime = new Date(str).getTime();
+    const today = new Date().getTime();
+
+    const year = ((today - dateTime)/(365*24*60*60*1000)).toFixed(0)
+    const month = ((today - dateTime)/(30*24*60*60*1000)).toFixed(0)
+    const day = ((today - dateTime)/(24*60*60*1000)).toFixed(0)
+
+    console.log (`${year} năm, ${month} tháng, ${day - (month* 30)}ngày`);
+}
+gettingAge();
+
+function getAge(birthDateString) {
+    const today = new Date();
+    const birthDate = new Date(birthDateString);
+  
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const monthDiff = today.getMonth() - birthDate.getMonth();
+  
+    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+      age--;
+    }
+  
+    const year = age;
+    const month = monthDiff < 0 ? monthDiff + 12 : monthDiff;
+    const dayDiff = today.getDate() - birthDate.getDate();
+    const day = dayDiff < 0 ? dayDiff + 30 : dayDiff;
+  
+    return `Tuổi của bạn là: ${year} năm, ${month} tháng và ${day} ngày`;
+  }
+  console.log(getAge('1995-09-09')); // "Tuổi của bạn là: 28 năm, 8 tháng và 28 ngày"
+
+
+
+
+
