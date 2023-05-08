@@ -94,42 +94,79 @@
     } 
 
 //6. Destructuring
+    //Định nghĩa:
+        //cho phép chúng ta trích xuất các giá trị từ các đối tượng (object) hoặc mảng (array) và gán chúng vào các biến riêng lẻ.
     // Ví dụ 1: Object
-    const{name,price} = car;
-    if (name === "honda" && price >= 2000){
-        alert ("Bạn được khuyến mãi")
-    }
+        const{name,price} = car;
+        if (name === "honda" && price >= 2000){
+            alert ("Bạn được khuyến mãi")
+        }
 
-    // Ví dụ 2: Object: Mặc định giá trị cho các thuộc tính nếu giá trị không tồn tại trong đối tượng:
-    // Khai báo đối tượng
-    const myObject = { name: 'John', age: 30 };
+    // Ví dụ 2: Object
+        // Khai báo đối tượng
+        const myObject = { name: 'John', age: 30 };
 
-    // Sử dụng destructuring với giá trị mặc định cho thuộc tính job nếu không tồn tại
-    const { name, age, job = 'developer' } = myObject;
+        // Sử dụng destructuring với giá trị mặc định cho thuộc tính job nếu không tồn tại
+        const { name, age, job = 'developer' } = myObject;
 
-    // Log kết quả
-    console.log(name); // Kết quả: 'John'
-    console.log(age); // Kết quả: 30
-    console.log(job); // Kết quả: 'developer'
+        // Log kết quả
+        console.log(name); // Kết quả: 'John'
+        console.log(age); // Kết quả: 30
+        console.log(job); // Kết quả: 'developer'
 
-    // Ví dụ 3: Array (theo vị trí)
-    let cStudents = [10,20,40,60];
-    let [sTeam1, sTeam2, sTeam3,sTeam4] = cStudents;
-    if (sTeam1 < 0){
-        sTeam1 = 0;
-        sTeam2 += 10;
-    }
+    //Ví dụ 3: Object
+        const person = {
+            name: 'John Doe',
+            age: 30,
+            gender: 'male',
+            address: {
+            street: '123 Main St',
+            city: 'New York',
+            state: 'NY',
+            zip: 10001
+            }
+        };
+        
+        // Trích xuất các giá trị trong đối tượng
+        const { name, age, gender } = person;
+        console.log(name); // Output: 'John Doe'
+        console.log(age); // Output: 30
+        console.log(gender); // Output: 'male'
+        
+        // Gán giá trị của đối tượng vào các biến khác
+        const { street, city, state } = person.address;
+        console.log(street); // Output: '123 Main St'
+        console.log(city); // Output: 'New York'
+        console.log(state); // Output: 'NY'
+        
     // Ví dụ 4: Array (theo vị trí)
-    // Khai báo mảng
-    const myArray = ['apple', 'banana', 'orange', 'pear', 'kiwi'];
+        let cStudents = [10,20,40,60];
+        let [sTeam1, sTeam2, sTeam3,sTeam4] = cStudents;
+        if (sTeam1 < 0){
+            sTeam1 = 0;
+            sTeam2 += 10;
+        }
+    // Ví dụ 5: Array (theo vị trí)
+        // Khai báo mảng
+        const myArray = ['apple', 'banana', 'orange', 'pear', 'kiwi'];
 
-    // Sử dụng destructuring kết hợp toán tử rest để lấy 2 phần tử đầu và các phần tử còn lại của mảng
-    const [fruit1, fruit2, ...rest] = myArray;
+        // Sử dụng destructuring kết hợp toán tử rest để lấy 2 phần tử đầu và các phần tử còn lại của mảng
+        const [fruit1, fruit2, ...rest] = myArray;
 
-    // Log kết quả
-    console.log(fruit1); // Kết quả: 'apple'
-    console.log(fruit2); // Kết quả: 'banana'
-    console.log(rest); // Kết quả: ['orange', 'pear', 'kiwi']
+        // Log kết quả
+        console.log(fruit1); // Kết quả: 'apple'
+        console.log(fruit2); // Kết quả: 'banana'
+        console.log(rest); // Kết quả: ['orange', 'pear', 'kiwi']
+
+    //Ví dụ 6: Array
+        const numbers = [1, 2, 3];
+
+        // Trích xuất các giá trị trong mảng
+        const [a, b, c] = numbers;
+        console.log(a); // Output: 1
+        console.log(b); // Output: 2
+        console.log(c); // Output: 3
+    
 
 //7. Callback: là 1 hàm (function)
 function success (username){
@@ -146,54 +183,6 @@ login("mindx", "12345", ()=> {}) //Cách 1
 login("mindx", "12345",success) //Cách 2: khai báo function ở trên
 
 
-
-const users = ["Thy","Hiếu", "Long"];
-const users2 = ["Quyên", ...users];
-const users3= [...users, ...users2];
-
-
-const handleUsers => (user => {
-    let newUser = [];
-})
-const uniqueUsers = users3.filter((value, index, self) => self.indexOf(value) === index);
-console.log(uniqueUsers); // ["Thy", "Hiếu", "Long", "Quyên"]
-
-
-
-
-
-// Viết function nhận vào ngày tháng năm sinh, sau đó trả về tuổi của người dung theo dạng: Tuổi của bạn là: 22 năm, 3 tháng, 20 ngày
-let gettingAge = (str) => {
-    const dateTime = new Date(str).getTime();
-    const today = new Date().getTime();
-
-    const year = ((today - dateTime)/(365*24*60*60*1000)).toFixed(0)
-    const month = ((today - dateTime)/(30*24*60*60*1000)).toFixed(0)
-    const day = ((today - dateTime)/(24*60*60*1000)).toFixed(0)
-
-    console.log (`${year} năm, ${month} tháng, ${day - (month* 30)}ngày`);
-}
-gettingAge();
-
-function getAge(birthDateString) {
-    const today = new Date();
-    const birthDate = new Date(birthDateString);
-  
-    let age = today.getFullYear() - birthDate.getFullYear();
-    const monthDiff = today.getMonth() - birthDate.getMonth();
-  
-    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
-      age--;
-    }
-  
-    const year = age;
-    const month = monthDiff < 0 ? monthDiff + 12 : monthDiff;
-    const dayDiff = today.getDate() - birthDate.getDate();
-    const day = dayDiff < 0 ? dayDiff + 30 : dayDiff;
-  
-    return `Tuổi của bạn là: ${year} năm, ${month} tháng và ${day} ngày`;
-  }
-  console.log(getAge('1995-09-09')); // "Tuổi của bạn là: 28 năm, 8 tháng và 28 ngày"
 
 
 
