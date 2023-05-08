@@ -145,10 +145,7 @@ function login(username, password,success){
 login("mindx", "12345", ()=> {}) //Cách 1
 login("mindx", "12345",success) //Cách 2: khai báo function ở trên
 
-// 8. Hoisting: Các loại có tính chất hoisting
-/*
 
-*/
 
 const users = ["Thy","Hiếu", "Long"];
 const users2 = ["Quyên", ...users];
