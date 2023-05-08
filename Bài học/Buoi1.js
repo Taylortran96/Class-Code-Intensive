@@ -147,12 +147,7 @@ login("mindx", "12345",success) //Cách 2: khai báo function ở trên
 
 // 8. Hoisting: Các loại có tính chất hoisting
 /*
-1. Biến let và const: cả hai loại biến này không có tính chất hoisting. Khi sử dụng let hoặc const, các biến này sẽ phải được khai báo trước khi được sử dụng.
-2. Biến var: biến var có tính chất hoisting. Nghĩa là, khi khai báo biến var, trình biên dịch sẽ tạo một biến mới và kéo lên đầu phạm vi. Giá trị của biến này sẽ là undefined cho đến khi được gán giá trị.
-3. Function declaration: khi khai báo một hàm bằng function declaration, các hàm này cũng có tính chất hoisting. Điều này có nghĩa là các hàm có thể được sử dụng trước khi được khai báo.
-4. Function expression: nếu sử dụng function expression để khai báo hàm, thì hàm này sẽ không có tính chất hoisting.
-5. Class Declaration: Khai báo lớp cũng có tính chất hoisting, bởi vì nó được xem như là một loại hàm đặc biệt.
-6. Function generator: Generator function cũng có tính chất hoisting và có thể được sử dụng trước khi được khai báo.
+
 */
 
 const users = ["Thy","Hiếu", "Long"];
