@@ -44,7 +44,7 @@
         }
         export const MY_VARIABLE = 'This is a variable!';
 
-        import { PI, double, MY_VARIABLE } from './Buoi1-module';
+        import { PI, double, MY_VARIABLE } from './Buoi2-Zoom';
         console.log(PI);
         console.log(double(5));
         console.log(MY_VARIABLE);
@@ -55,7 +55,7 @@
             console.log(`Hello there, ${name}!`);
           }
         
-        import sayHiFunction from './Buoi1-module';
+        import sayHiFunction from './Buoi2-Zoom';
 
 // 5. Spread & Rest Operator
 // Spread operator: toán tử, giúp cta "trải thẳng" các phần tử trong array, object
