@@ -1,0 +1,7 @@
+.theme {
+   background-color: yellow; 
+   display: flex;
+   flex-direction: column;
+   width: 600;
+   height: 600;
+}
