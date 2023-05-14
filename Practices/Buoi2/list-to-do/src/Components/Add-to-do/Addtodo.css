@@ -1,0 +1,27 @@
+.addtodo{
+  --body-color:#4acc90;
+  --button-color: #a3dfc3;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--body-color);
+  height: fit-content;
+  border: 2px solid black;
+  text-align: center;
+}
+.addtodo input{
+  text-align: center;
+  width: 80%;
+  height: 30px;
+  border: 1px solid black;
+  background: var(--body-color);
+}
+.addtodo button{
+  text-transform: uppercase;
+  background: var(--button-color);
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 10px;
+}

@@ -1,0 +1,41 @@
+.App {
+  text-align: center;
+}
+
+
+.main-layout{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.custom-header{
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #004370;
+  height: 26px;
+}
+.custom-menu{
+  height: 26px;
+  align-items: center;
+  padding: 0 15px;
+  margin: 0 5px;
+  color: white;
+}
+.custom-menu:hover{
+  background-color: red;
+}
+
+.top-layout{
+  display: grid;
+  grid-template-columns: repeat(6, 100px);
+  grid-template-rows: repeat(6, 100px);
+  margin-top: 100px;
+}
+img{
+  border-radius: 6px;
+}
