@@ -1,16 +1,27 @@
 import './App.css';
-import React from'react';
-import TopContainer from './Components/TopContainer/TopContainer';
-import MiddleContainer from './Components/MiddleContainer/MiddleContainer';
-import BottomContainer from './Components/BottomContainer/BottomContainer';
+import TopLayout from './Main Layout/TopLayout'
+import HighlightNewsLayout from './Components/MainNews/highlightnews';
+import AppStyles from './App.module.css'
+
 
 
 function App() {
+  let theme ="light";
   return (
     <div className="App">
-      <TopContainer></TopContainer>
-      <MiddleContainer></MiddleContainer>
-      <BottomContainer></BottomContainer>
+      <div className = {theme == "light" ? AppStyles.appDark : AppStyles.appLight}>
+        <div className='e-magazine'>
+          <h1 className='title'>Hi</h1>
+        </div>
+        
+        <TopLayout/>
+
+        <div className='highlight-news'>
+          <HighlightNewsLayout/>
+        </div>
+      </div>
+
+      
     </div>
   );
 }
