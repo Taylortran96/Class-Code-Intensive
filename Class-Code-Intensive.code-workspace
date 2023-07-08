@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../Review"
+		},
+		{
+			"path": "../example/furniture-store-react"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Class-Code-Intensive"
+	}
+}
