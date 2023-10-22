@@ -1,0 +1,84 @@
+.App {
+  margin: 0;
+  padding: 2rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+}
+:root{
+  --main--color: lightseagreen;
+  --1st--color: rgb(80, 211, 204);
+}
+.counter-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
+}
+.counter1-container{
+  border: 2px solid black;
+  background-color: var(--main--color);
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.counter2-container{
+  border: 2px solid black;
+  background-color: var(--1st--color);
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.counter1-container h1, .counter2-container h1{
+  font-size: 20px;
+}
+.button-wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 1rem;
+}
+.form-wrapper{
+  background-color: var(--main--color);
+  border: 2px solid black;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form-wrapper h1{
+  font-size: 20px;
+  text-transform: uppercase;
+  color: black;
+}
+.form-wrapper form{
+  background-color: var(--1st--color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  margin: 1rem;
+}
+.form-wrapper form label{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 1rem;
+  padding: 0 2rem;
+  font-weight: bold;
+}
+.form-wrapper form label input{
+  margin: 0 2rem;
+}
+.form-wrapper form button{
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.form-wrapper form button:hover{
+  background-color: var(--1st--color);
+}
